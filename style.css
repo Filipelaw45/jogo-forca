@@ -1,0 +1,23 @@
+body{
+    background-color: #1C2128;
+    color: #ADBAC8;
+}
+#container{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#palavra, #erradas{
+    font-size: 2rem;
+    letter-spacing: 10px;
+}
+
+#mensagem{
+    margin: 50px;
+    padding: 50px;
+    text-align: center;
+    color: brown;
+}
