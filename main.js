@@ -10,9 +10,8 @@ let letrasAcertadas = [], letrasErradas = []
 atualizaTela()
 
 document.addEventListener('keydown', (e)=>{
-    let code = e.keyCode
-    let letra = e.key.toLowerCase()
-    if(code >= 65 && code <= 90){
+    let letra = e.key
+    if(eUmaLetra(letra)){
         if(letrasErradas.includes(letra) || letrasAcertadas.includes(letra)){
             alert("letra já repetida")
         }else{
@@ -21,6 +20,11 @@ document.addEventListener('keydown', (e)=>{
     }
     atualizaTela()
 })
+
+function eUmaLetra(letra){
+    const regex = /[a-zA-Z]/
+    return regex.test(letra)
+}
 
 function atualizaTela(){
     mostrarLetrasErradas()
