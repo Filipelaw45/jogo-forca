@@ -1,7 +1,9 @@
-let palavras = [
-    'gato', 'cachorro', 'andorinha', 'pombo','capivara', 'pantera', 'hipopotamo', 'girafa', 'jacare', 'rinoceronte',
-    'vaca', 'ornitorrinco'
-]
+let palavras = ['gato', 'cachorro', 'andorinha', 'pombo', 'capivara', 'pantera', 'hipopotamo', 'girafa',
+ 'jacare', 'rinoceronte', 'vaca', 'ornitorrinco', 'abelha', 'alpaca', 'avestruz', 'baleia', 'bode', 
+ 'camelo', 'castor', 'cavalo', 'coala', 'cobra', 'coelho', 'crocodilo', 'elefante', 'galinha', 
+ 'golfinho', 'gorila', 'guaxinim', 'iguana', 'jabuti', 'lagosta', 'leopardo', 'lobo', 'lontra', 
+ 'macaco', 'morcego', 'ovelha', 'panda', 'papagaio', 'pardal', 'pato', 'pinguim', 'porco', 'rato', 
+ 'sapo', 'tamandua', 'tartaruga', 'tatu', 'tigre', 'touro', 'tubarao', 'tucano', 'urso', 'urubu', 'zebra']
 
 let palavra = palavras[Math.floor(Math.random() * palavras.length)]
 
