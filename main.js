@@ -9,6 +9,7 @@ let letrasAcertadas = [], letrasErradas = []
 
 atualizaTela()
 
+
 document.addEventListener('keydown', (e)=>{
     let letra = e.key
     if(eUmaLetra(letra)){
@@ -51,13 +52,20 @@ function mostrarLetrasCertas(){
 }
 
 function checaJogo(){
-    let mensagem = document.getElementById('mensagem')
+    let mensagem = document.querySelector('.title-msg')
     let divCerta = document.getElementById('palavra')
+    let modal = document.querySelector('.modal')
     if(palavra === divCerta.innerText){
-        mensagem.innerHTML = `<h2>Você ganhou!</h2>`
+        modal.style.display = 'flex'
+        mensagem.innerText = `Você Ganhou! A palavra era: ${palavra}!`
     }
 
     if(letrasErradas.length === 6){
-        mensagem.innerHTML = `<h2>Você perdeu!</h2>`
+        modal.style.display = 'flex'
+        mensagem.innerText = `Você perdeu! A palavra era ${palavra}!`
     }
+}
+
+function reiniciaJogo(){
+    window.location.reload()
 }

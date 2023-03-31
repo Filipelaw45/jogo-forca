@@ -1,23 +1,76 @@
+*{
+    font-family: Helvetica;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     background-color: #1C2128;
-    color: #ADBAC8;
+    color: #A3ADBB;
 }
-#container{
+
+header{
     display: flex;
+    width: 100%;
     align-items: center;
-    align-content: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    padding: 1.5rem 0;
+    border-bottom: 2px solid #ADBAC8;
     flex-wrap: wrap;
 }
 
-#palavra, #erradas{
-    font-size: 2rem;
-    letter-spacing: 10px;
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
 }
 
-#mensagem{
-    margin: 50px;
-    padding: 50px;
+#forca-img{
+    height: 400px;
+    max-width: 90%;
+}
+
+.letras-forca{
+    font-size: 2rem;
+    letter-spacing: .5rem;
+    padding: 1.3rem 0;
+    margin-bottom: 1.3rem;
+}
+
+.center{
     text-align: center;
-    color: brown;
+}
+
+.modal{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 30rem;
+    height: 20rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #A3ADBB;
+    border-radius: 30px;
+}
+
+.title-msg{
+    color: #1C2128;
+}
+
+.btn-jogar{
+    width: 10rem;
+    height: 3rem;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    background-color: #1C2128;
+    color: #ADBAC8;
+    cursor: pointer;
 }
