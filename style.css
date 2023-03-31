@@ -20,6 +20,21 @@ header{
     flex-wrap: wrap;
 }
 
+.flex{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn{
+    padding: .5rem;
+    background-color: #A3ADBB;
+    color: #1C2128;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
 #container{
     display: flex;
     flex-direction: column;
