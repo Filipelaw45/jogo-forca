@@ -19,6 +19,8 @@ function inicia(){
 
     let letra = document.getElementById('input').value
 
+    letra = letra.toLowerCase()
+
     if(eUmaLetra(letra)){
         if(letrasErradas.includes(letra) || letrasAcertadas.includes(letra)){
             alert("letra já repetida")
