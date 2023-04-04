@@ -89,3 +89,24 @@ header{
     color: #ADBAC8;
     cursor: pointer;
 }
+
+#input{
+    font-size: 1.2rem;
+    padding: .7rem;
+    width: 350px;
+    max-width: 90%;
+    text-align: center;
+    border: none;
+    background-color: #A3ADBB;
+    border-radius: 10px;
+}
+
+#input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+#btn-enviar{
+    height: 2.7rem;
+    width: 80px;
+}
