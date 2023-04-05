@@ -2,14 +2,11 @@ let palavras = ['gato', 'cachorro', 'andorinha', 'pombo', 'capivara', 'pantera',
 
 let palavra = palavras[Math.floor(Math.random() * palavras.length)]
 
-let letrasAcertadas = [], letrasErradas = [], pontos
+let letrasAcertadas = [], letrasErradas = []
 
-if(localStorage.getItem('Pontos') === null){
-    localStorage.setItem('Pontos', 0)
-    pontos = parseInt(localStorage.getItem('Pontos'))
-}else{
-    pontos = parseInt(localStorage.getItem('Pontos'))
-}
+if(localStorage.getItem('Pontos') === null) localStorage.setItem('Pontos', 0)
+
+let pontos = parseInt(localStorage.getItem('Pontos'))
 
 atualizaTela()
 
@@ -91,5 +88,5 @@ function salvaPontos(pontos){
 
 function zerar(){
     localStorage.setItem('Pontos', 0)
-    atualizaTela()
+    reiniciaJogo()
 }
