@@ -8,9 +8,11 @@ if(localStorage.getItem('Pontos') === null) localStorage.setItem('Pontos', 0)
 
 let pontos = parseInt(localStorage.getItem('Pontos'))
 
+let forcaIncompleta = true
+
 atualizaTela()
 
-document.addEventListener('keydown', (e) =>{ if(e.key === 'Enter') inicia() })
+document.addEventListener('keydown', (e) =>{ if(e.key === 'Enter' && forcaIncompleta) inicia() })
 
 function inicia(){
 
@@ -65,13 +67,21 @@ function checaJogo(){
     let mensagem = document.querySelector('.title-msg')
     let divCerta = document.getElementById('palavra')
     let modal = document.querySelector('.modal')
+    let input = document.getElementById('input')
+    let btn = document.getElementById('btn-enviar')
     if(palavra === divCerta.innerText){
+        input.disabled = true
+        btn.disabled = true
+        forcaIncompleta = false
         modal.style.display = 'flex'
         mensagem.innerText = `Você Ganhou! A palavra era: ${palavra}!`
         salvaPontos(pontos += 1)
     }
 
     if(letrasErradas.length === 6){
+        input.disabled = true
+        btn.disabled = true
+        forcaIncompleta = false
         modal.style.display = 'flex'
         mensagem.innerText = `Você perdeu! A palavra era ${palavra}!`
         if(pontos > 0) salvaPontos(pontos -= 1)
